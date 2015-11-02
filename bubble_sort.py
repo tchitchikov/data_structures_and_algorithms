@@ -19,6 +19,7 @@ class BubbleSort:
         :return:
         """
         input_array = self.handle_input()
+        print(self.sorting_process(input_array))
 
     def handle_input(self):
         '''
@@ -40,21 +41,18 @@ class BubbleSort:
                                  'please try again')
         return self.array
 
-    def sorting_process(self):
+    def sorting_process(self, input_array):
         """
-        This adjusts the array positions
-
+        Compare each number to the next and swap positions.
+        input_array(list) = list of numbers to be sorted
         :return:
         """
-        pass
+        for i in range(len(input_array)-1, 0, -1):
+            for j in range(len(input_array)-1):
+                if input_array[j] > input_array[j+1]:
+                    input_array[j], input_array[j+1] = input_array[j+1], input_array[j]
+        return input_array
 
-    def comparison_process(self):
-        """
-        This compares the two numbers and returns the larger
-
-        :return:
-        """
-        pass
 
 if __name__ == '__main__':
     sorting = BubbleSort()
