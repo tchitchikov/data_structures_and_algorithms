@@ -10,16 +10,13 @@ from base_class import Sort
 
 
 class BubbleSort(Sort):
-    def __init__(self):
-        self.array = []
-
     def sorting_process(self, input_array):
         """
         Compare each number to the next and swap positions.
         input_array(list) = list of numbers to be sorted
         :return:
         """
-        for i in range(len(input_array)-1, 0, -1):
+        for i in range(0, len(input_array)-1, 1):
             for j in range(len(input_array)-1):
                 if input_array[j] > input_array[j+1]:
                     input_array[j], input_array[j+1] = input_array[j+1], input_array[j]

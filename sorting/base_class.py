@@ -4,6 +4,9 @@ import abc
 
 
 class Sort:
+    def __init__(self):
+        self.array = []
+
     def main(self):
         """
         handles the main logic
